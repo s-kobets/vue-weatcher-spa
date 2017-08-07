@@ -1,31 +1,7 @@
-@import 'normalize.css'
+@import 'normalize.css';
+@import './components/app.css';
 
 :root {
   --background-main: papayawhip;
   --color-main: palevioletred;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  background: var(--background-main);
-  display: flex;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
 }
