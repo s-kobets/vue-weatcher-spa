@@ -1,5 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const postCssConfig = require('./postcss.config')
 
 module.exports = {
   entry: './src/main.js',
@@ -14,9 +15,11 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
+          postcss: postCssConfig,
           loaders: {
           },
           // other vue-loader options go here
+          cssSourceMap: false,
         }
       },
       {

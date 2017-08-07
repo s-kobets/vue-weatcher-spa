@@ -1,7 +1,7 @@
 <template>
-  <form>
+  <form v-on:submit.prevent='handleFormSubmit'>
     <input type='text'  v-model='cityInput'>
-    <button type='submit' v-on:click='handleFormSubmit'>Add City</button>
+    <button type='submit'>Add City</button>
   </form>
 </template>
 
@@ -14,11 +14,8 @@ export default {
 
   methods: {
       handleFormSubmit: function(e) {
-        e.preventDefault();
-        this.$store.commit({
-            type: 'ADD_CITY',
-            city: this.cityInput
-        })
+        this.$store.dispatch('addCity', { city: this.cityInput })
+        e.target.reset()
       }
   }
 }

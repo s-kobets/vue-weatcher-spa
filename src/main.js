@@ -9,6 +9,13 @@ const store = new Vuex.Store({
   state: {
     city: []
   },
+
+  actions: {
+      addCity({commit}, payload) {
+          commit('ADD_CITY', payload)
+      }
+  },
+
   mutations: {
     ADD_CITY (state, payload) {
       state.city.push(payload.city)
