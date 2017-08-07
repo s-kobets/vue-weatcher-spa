@@ -22,26 +22,4 @@ export default {
 }
 </script>
 
-<style>
-@import 'normalize.css'
-
-#app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
-  margin-top: 60px
-
-h1, h2
-  font-weight: normal
-
-ul
-  list-style-type: none
-  padding: 0
-
-.logo
-  width: 60px
-  height: 60px
-
-</style>
+<style src='./assets/index.css' lang='postcss'/>
