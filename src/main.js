@@ -7,19 +7,19 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    city: []
+    citys: []
   },
 
   actions: {
       addCity({commit}, payload) {
           commit('ADD_CITY', payload)
-      }
+      },
   },
 
   mutations: {
     ADD_CITY (state, payload) {
-      state.city.push(payload.city)
-    }
+      state.citys.push(payload.city)
+    },
   }
 })
 

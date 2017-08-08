@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import api from '../assets/api'
 
 export default {
   data: () => ({
@@ -14,8 +15,15 @@ export default {
 
   methods: {
       handleFormSubmit: function(e) {
-        this.$store.dispatch('addCity', { city: this.cityInput })
-        e.target.reset()
+        const argument = {
+            type: 'weather', 
+            settings: `?q=${this.cityInput}`,
+        }
+
+        api.get(argument).then(result => {
+            this.$store.dispatch('addCity', { city: result.response })
+            e.target.reset()
+        })
       }
   }
 }

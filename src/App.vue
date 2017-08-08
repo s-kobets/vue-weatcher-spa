@@ -3,11 +3,13 @@
     <img class="logo" src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <CityInput />
+    <CityList />
   </div>
 </template>
 
 <script>
 import CityInput from './components/search-input.vue';
+import CityList from './components/city-list.vue'
 
 export default {
   name: 'app',
@@ -17,7 +19,8 @@ export default {
     }
   },
   components: {
-    CityInput
+    CityInput,
+    CityList
   }
 }
 </script>
