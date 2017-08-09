@@ -1,6 +1,6 @@
 <template>
   <form v-on:submit.prevent='handleFormSubmit'>
-    <input type='text'  v-model='cityInput'>
+    <input type='text' v-model='cityInput'>
     <button type='submit'>Add City</button>
   </form>
 </template>
