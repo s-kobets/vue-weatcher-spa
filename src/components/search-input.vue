@@ -16,13 +16,13 @@ export default {
   methods: {
       handleFormSubmit: function(e) {
         const argument = {
-            type: 'weather', 
-            settings: `?q=${this.cityInput}`,
+          type: 'weather', 
+          settings: `?q=${this.cityInput}`,
         }
 
         api.get(argument).then(result => {
-            this.$store.dispatch('addCity', { city: result.response })
-            e.target.reset()
+          this.$store.dispatch('addCity', { city: result.response })
+          e.target.reset()
         })
       }
   }

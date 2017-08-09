@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "./node_modules/.bin/ava"
   },
   "dependencies": {
     "vue": "^2.3.3"
@@ -17,6 +18,8 @@
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.5.1",
+    "babel-register": "^6.24.1",
+    "browser-env": "^3.1.0",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "cssnano": "^3.10.0",
@@ -26,11 +29,20 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
+    "require-extension-hooks": "^0.3.0",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^0.4.0",
     "vue-loader": "^12.1.0",
     "vue-router": "^2.7.0",
     "vue-template-compiler": "^2.3.3",
     "vuex": "^2.3.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "ava": {
+    "require": [
+      "./test/helpers/setup.js",
+      "babel-register"
+    ]
   }
 }
