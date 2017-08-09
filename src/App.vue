@@ -2,15 +2,15 @@
   <div id="app">
     <img class="logo" src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <CityInput />
-    <CityList />
+    <router-link to="/more">Go to More</router-link>
+    <router-link to="/search">Go to Search</router-link>
+
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import CityInput from './components/search-input.vue';
-import CityList from './components/city-list.vue'
-
 export default {
   name: 'app',
   data () {
@@ -18,10 +18,6 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  components: {
-    CityInput,
-    CityList
-  }
 }
 </script>
 
