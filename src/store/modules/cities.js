@@ -3,12 +3,12 @@ import * as actions from '../actions'
 // import * as getters from '../getters'
 
 const state = {
-  cities: []
+  list: []
 }
 
 const mutations = {
     [types.ADD_CITY] (state, payload) {
-        state.cities.push(payload.city)
+        state.list.push(payload.city)
     },
 }
 
