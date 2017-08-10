@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import More from './More.vue'
-import Search from './Search.vue'
+const Search = resolve => require(['./Search.vue'], resolve)
+const More = resolve => require(['./More.vue'], resolve)
 
 Vue.use(VueRouter)
 
