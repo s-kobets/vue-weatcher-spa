@@ -12,5 +12,7 @@ const routes = [
 ]
 
 export default new VueRouter({
-  routes // сокращение от `routes: routes`
+  mode: 'history',  // убираем решетку в url
+  routes, // сокращение от `routes: routes`
+  linkActiveClass: 'is-active'  // класс для активного линка
 })
