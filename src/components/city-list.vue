@@ -1,10 +1,10 @@
 <template>
   <ul class='column' v-if='cities.length > 0'>
     <li v-for='city in cities'>
-      <div className='city'>
-        <div className='city-block'>
+      <div class='city'>
+        <div class='city-block'>
           <img :src='city.weather[0].icon' :alt='city.weather[0].description' />
-          <div className='city-block__description'>
+          <div class='city-block__description'>
             <strong> {{city.name}} </strong>
             <ul>
               <li>{{city.weather[0].description}}</li>
@@ -34,3 +34,4 @@ export default {
 }
 </script>
 
+<style src='../assets/components/city-list.css' lang='postcss' />
