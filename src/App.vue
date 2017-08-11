@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <img class="logo" src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
+    <router-link to="/">Go to Home</router-link>
     <router-link to="/more">Go to More</router-link>
     <router-link to="/search">Go to Search</router-link>
 
 
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
