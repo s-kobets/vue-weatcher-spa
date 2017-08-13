@@ -15,4 +15,10 @@ npm run dev
 npm run build
 ```
 
+# eslint
+npm run eslint
+
+npm run eslint -- --fix (fix)
+```
+
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

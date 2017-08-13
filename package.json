@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "test": "./node_modules/.bin/ava"
+    "test": "./node_modules/.bin/ava",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
     "vue": "^2.3.3"
@@ -15,6 +16,7 @@
   "devDependencies": {
     "ava": "^0.21.0",
     "babel-core": "^6.0.0",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.5.1",
@@ -23,6 +25,12 @@
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "cssnano": "^3.10.0",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.2.0",
+    "eslint-plugin-import": "^2.7.0",
     "file-loader": "^0.9.0",
     "http-client": "^4.3.1",
     "normalize.css": "^7.0.0",
