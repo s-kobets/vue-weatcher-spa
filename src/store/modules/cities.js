@@ -1,20 +1,20 @@
-import * as types from '../mutation-types'
-import * as actions from '../actions'
-// import * as getters from '../getters'
+import * as types from '../mutation-types';
+import * as actions from '../actions';
+import * as getters from '../getters';
 
 const state = {
-  list: []
-}
+  list: [],
+};
 
 const mutations = {
-    [types.ADD_CITY] (state, payload) {
-        state.list.push(payload.city)
-    },
-}
+  [types.ADD_CITY](state, payload) {
+    state.list.push(payload.city);
+  },
+};
 
 export default {
   state,
-  // getters,
+  getters,
   actions,
-  mutations
-}
+  mutations,
+};

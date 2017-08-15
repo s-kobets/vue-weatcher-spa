@@ -22,16 +22,15 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
   computed: {
-      // console.log(this.$store.state.cities.list)
     ...mapState({
       cities: state => state.cities.list,
-    })
-  }
-}
+    }),
+  },
+};
 </script>
 
 <style src='../assets/components/city-list.css' lang='postcss' />
