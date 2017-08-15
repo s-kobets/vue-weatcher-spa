@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import api from '../assets/api'
+import api from '../assets/api';
 
 export default {
   data: () => ({
@@ -14,17 +14,17 @@ export default {
   }),
 
   methods: {
-      handleFormSubmit: function(e) {
-        const argument = {
-          type: 'weather', 
-          settings: `?q=${this.cityInput}`,
-        }
+    handleFormSubmit(e) {
+      const argument = {
+        type: 'weather',
+        settings: `?q=${this.cityInput}`,
+      };
 
-        api.get(argument).then(result => {
-          this.$store.dispatch('addCity', { city: result.response })
-          e.target.reset()
-        })
-      }
-  }
-}
+      api.get(argument).then((result) => {
+        this.$store.dispatch('addCity', { city: result.response });
+        e.target.reset();
+      });
+    },
+  },
+};
 </script>
