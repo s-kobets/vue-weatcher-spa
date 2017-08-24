@@ -9,3 +9,8 @@ export const addCity = ({ commit }, payload) => {
 
   commit(types.ADD_CITY, payload);
 };
+
+export const removeCity = ({ commit }, payload) => {
+  commit(types.REMOVE_CITY, payload);
+}
+;

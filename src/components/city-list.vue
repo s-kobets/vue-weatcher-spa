@@ -1,7 +1,7 @@
 <template>
   <ul class='column' v-if='cities.length > 0'>
     <li v-for='city in cities'>
-      <div class='city'>
+      <div class='city' style='position: relative;'>
         <div class='city-block'>
           <img :src='city.weather[0].icon' :alt='city.weather[0].description' />
           <div class='city-block__description'>
@@ -15,19 +15,25 @@
             </ul>
           </div>
         </div>
-        <a href='#' class='city-block__delete' title='delete'>&#215;</a>
+        <a class='city-block__delete' title='delete' v-on:click='removeCity(city)'>&#215;</a>
       </div>
     </li>
   </ul>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   computed: {
     ...mapState({
       cities: state => state.cities.list,
+    }),
+  },
+
+  methods: {
+    ...mapActions({
+      removeCity: 'removeCity',
     }),
   },
 };
